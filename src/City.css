@@ -1,0 +1,11 @@
+.search {
+  background-color: rgb(255, 255, 255);
+  height: 36px;
+  line-height: 32px;
+  width: 400px;
+  padding: 1px 2px 1px 10px;
+}
+
+button{
+    line-height: 32px;
+}
