@@ -1,0 +1,104 @@
+.search {
+  border: solid 1px gray;
+  height: 36px;
+  line-height: 32px;
+  width: 400px;
+  padding: 1px 2px 1px 10px;
+  outline: none;
+}
+
+.search:hover {
+  border: solid 2px #9fd3c7;
+}
+
+button {
+  line-height: 2;
+  background-color: #9fd3c7 !important;
+  border: none !important;
+  min-width:fit-content;
+}
+.heading {
+  font-size: 32px;
+  font-weight: 650;
+}
+
+.description,
+.time {
+  font-size: 18px;
+  font-weight: 450;
+}
+
+.icon {
+  animation: updown 3s ease infinite;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(-3%);
+  }
+
+  50% {
+    transform: translateY(5%);
+  }
+
+  100% {
+    transform: translateY(-3%);
+  }
+}
+
+ul.weatherinfo {
+  list-style: none;
+}
+
+.temperature {
+  font-size: 60px;
+  font-weight: 400;
+  position: relative;
+  top: 2px;
+  left: 9px;
+}
+
+.conditions {
+  position: relative;
+  top: 25px;
+}
+.unit {
+  position: relative;
+  top: -26px;
+  left: 9px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media (max-width:420px ){
+  .heading {
+  font-size: 25px;
+  font-weight: 650;
+  
+}
+
+.description,
+.time {
+  font-size: 14px;
+  font-weight: 450;
+}
+.icon{
+  width: 80px;
+}
+.temperature{
+  font-size: 40px;
+}
+.unit{
+  font-size: 14px;
+  position: relative;
+  top: -15px;
+  left: 9px;
+
+}
+.conditions{
+  font-size: 14px;
+  position: relative;
+  top: 10px;
+  left: -22px;
+  
+}
+}
