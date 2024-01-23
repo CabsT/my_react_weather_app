@@ -1,12 +1,19 @@
 import "./App.css";
-import CitySearchForm from "./CitySearchForm";
+import SearchCityForm from "./SearchCityForm";
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <CitySearchForm defaultCity="Somerset West" />
+    <div>
+      <div className="App mb-0">
+        <div className="container">
+          <SearchCityForm defaultCity="Somerset West" />
+        </div>
       </div>
+      <footer className="fw-bold text-center mt-0">
+        This project was coded by Charné Teichert and is{" "}
+        <a href="/">open-sourced on GitHub{" "}</a>and{" "}
+        <a href="/">hosted on Netlify</a>
+      </footer>
     </div>
   );
 }
