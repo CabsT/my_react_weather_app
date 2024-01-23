@@ -11,8 +11,16 @@ function App() {
       </div>
       <footer className="fw-bold text-center mt-0">
         This project was coded by Charné Teichert and is{" "}
-        <a href="/">open-sourced on GitHub{" "}</a>and{" "}
-        <a href="/">hosted on Netlify</a>
+        <a
+          className="link"
+          href="https://github.com/CabsT/my_react_weather_app"
+        >
+          open-sourced on GitHub{" "}
+        </a>
+        and{" "}
+        <a className="link" href="/">
+          hosted on Netlify
+        </a>
       </footer>
     </div>
   );
