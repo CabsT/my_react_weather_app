@@ -10,7 +10,7 @@ export default function Weather(props) {
       <div className="col-sm-12 description text-capitalize"> {props.data.description}</div>
       <div className="row">
         <div className="col-3 col-sm-2">
-          <img src={props.data.icon_url} className="icon"/>
+          <img src={props.data.icon_url} className="icon" alt={props.data.description}/>
         </div>
         <div className=" col-3 col-sm-2">
           <span className="temperature">{props.data.temp}</span>
