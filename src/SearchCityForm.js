@@ -42,25 +42,23 @@ export default function SearchCityForm(props) {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <div className="row clearfix">
-            <div className="col-6 col-sm-8 col-md-9">
-              <input
-                type="search"
-                placeholder="Enter a city..."
-                className="search w-100 float-start"
-                onChange={handleCityChange}
-              />
-            </div>
-            <div className="col-6 col-sm-3 col-md-3">
-              <button
-                type="submit"
-                className="btn btn-primary text-dark fw-normal rounded-3 px-4 float-start"
-              >
-                Search
-              </button>
-            </div>
+          <div className="input-group">
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              className="search form-control"
+              onChange={handleCityChange}
+            />
+
+            <button
+              type="submit"
+              className="btn btn-primary text-dark fw-normal rounded-3 ms-2 px-4"
+            >
+              Search
+            </button>
           </div>
         </form>
+
         <Weather data={weatherinfo} />
       </div>
     );
