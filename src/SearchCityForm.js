@@ -14,11 +14,11 @@ export default function SearchCityForm(props) {
       city: response.data.city,
       description: response.data.condition.description,
       icon_url: response.data.condition.icon_url,
+      icon: response.data.condition.icon,
       time: response.data.time,
       temp: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
       wind: Math.round(response.data.wind.speed),
-
     });
     console.log(response.data);
   }
@@ -42,19 +42,19 @@ export default function SearchCityForm(props) {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-8 col-md-9">
+          <div className="row clearfix">
+            <div className="col-6 col-sm-8 col-md-9">
               <input
                 type="search"
                 placeholder="Enter a city..."
-                className="search w-100"
+                className="search w-100 float-start"
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-4 col-md-3">
+            <div className="col-6 col-sm-3 col-md-3">
               <button
                 type="submit"
-                className="btn btn-primary text-dark fw-normal rounded-3 w-100"
+                className="btn btn-primary text-dark fw-normal rounded-3 px-4 float-start"
               >
                 Search
               </button>
