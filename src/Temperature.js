@@ -18,7 +18,7 @@ export default function Temperature(props) {
 
   if (unit === "celcius") {
     return (
-      <div className=" col">
+      <div className=" col temp">
         <span className="temperature">{props.celcius}</span>
         <span className="unit">
           °C |{" "}

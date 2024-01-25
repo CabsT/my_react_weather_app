@@ -12,6 +12,7 @@ export default function SearchCityForm(props) {
     setReady(true);
     setWeatherinfo({
       city: response.data.city,
+      coordinates: response.data.coordinates,
       description: response.data.condition.description,
       icon_url: response.data.condition.icon_url,
       icon: response.data.condition.icon,

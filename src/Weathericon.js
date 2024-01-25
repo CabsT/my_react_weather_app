@@ -24,7 +24,5 @@ export default function Weathericon(props) {
     "mist-night": "fog",
   };
 
-  return (
-    <WeatherSvg state={animatedIcon[props.icon]} width={90} height={100} />
-  );
+  return <WeatherSvg state={animatedIcon[props.icon]} width={props.width} height ={props.height}/>;
 }

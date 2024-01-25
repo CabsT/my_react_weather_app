@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import "./CityWeather.css";
 import Weathericon from "./Weathericon";
 import Temperature from "./Temperature";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   return (
@@ -14,11 +15,14 @@ export default function Weather(props) {
           {" "}
           {props.data.description}
         </div>
-        <div className="row row-cols-auto">
+        <div
+          className="row row-cols-auto flex-nowrap"
+          style={{ minWidth: "100%", overflow: "auto" }}
+        >
           <div className="col p-0">
-            <Weathericon icon={props.data.icon}/>
+            <Weathericon icon={props.data.icon} width={100} height={100} />
           </div>
-          <Temperature celcius = {props.data.temp}/>
+          <Temperature celcius={props.data.temp} />
           <div className="col ms-2">
             <ul className="weatherinfo">
               <li>Humidity: {props.data.humidity}%</li>
@@ -27,6 +31,7 @@ export default function Weather(props) {
           </div>
         </div>
       </div>
+      <WeatherForecast coordinates={props.data.coordinates} />
     </div>
   );
 }
