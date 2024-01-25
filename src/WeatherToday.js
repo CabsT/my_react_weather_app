@@ -25,8 +25,13 @@ export default function Weather(props) {
           <Temperature celcius={props.data.temp} />
           <div className="col ms-2">
             <ul className="weatherinfo">
-              <li>Humidity: {props.data.humidity}%</li>
-              <li>Wind: {props.data.wind}km/h</li>
+              <li>
+                Humidity:{" "}
+                <span className="fw-bold">{props.data.humidity}%</span>
+              </li>
+              <li>
+                Wind: <span className="fw-bold">{props.data.wind}km/h</span>
+              </li>
             </ul>
           </div>
         </div>

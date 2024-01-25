@@ -11,12 +11,15 @@ export default function WeatherForecastDay(props) {
     
   return (
     <div>
-      <div>{day}</div>
+      <div>
+        <span className="fw-bold">{day}</span>
+      </div>
       <div>
         <Weathericon icon={props.data.condition.icon} width={60} height={60} />
       </div>
       <div>
-        <span>{max}°</span> <span className="opacity-75 ms-1">{min}°</span>
+        <span className="fw-bold">{max}°</span>{" "}
+        <span className="opacity-75 ms-1">{min}°</span>
       </div>
     </div>
   );
