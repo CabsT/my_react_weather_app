@@ -7,6 +7,7 @@ export default function SearchCityForm(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [ready, setReady] = useState(false);
   const [weatherinfo, setWeatherinfo] = useState({});
+  const [unit, setUnit] = useState("celcius")
 
   function handleResponse(response) {
     setReady(true);
@@ -60,7 +61,7 @@ export default function SearchCityForm(props) {
           </div>
         </form>
 
-        <Weather data={weatherinfo} />
+        <Weather data={weatherinfo} unit = {unit} setUnit ={setUnit}/>
       </div>
     );
   } else {

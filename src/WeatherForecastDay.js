@@ -3,8 +3,15 @@ import Weathericon from "./Weathericon";
 
 
 export default function WeatherForecastDay(props) {
-  let max = Math.round(props.data.temperature.maximum);
-  let min = Math.round(props.data.temperature.minimum);
+
+  let max =
+    props.unit === "celcius"
+      ? Math.round(props.data.temperature.maximum)
+      : Math.round((props.data.temperature.maximum * 9) / 5 + 32); 
+  let min =
+    props.unit === "celcius"
+      ? Math.round(props.data.temperature.minimum)
+      : Math.round((props.data.temperature.minimum * 9) / 5 + 32);
   let now = new Date(props.data.time * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[now.getDay()];

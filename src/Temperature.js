@@ -10,7 +10,7 @@ export default function Temperature(props) {
 
   function showCelcius(event) {
     event.preventDefault();
-    setUnit("celcius");
+  setUnit("celcius")
   }
   function fahrenheit() {
     return Math.round((props.celcius * 9) / 5 + 32);
@@ -23,7 +23,7 @@ export default function Temperature(props) {
         <span className="unit">
           °C |{" "}
           <a
-            className={unit === "celcius" ? "active-link" : "inactive-link"}
+            className={unit === "celcius"? "active-link" : "inactive-link"}
             href="/"
             onClick={showFahrenheit}
           >
@@ -47,7 +47,7 @@ export default function Temperature(props) {
           |{" "}
           <a
             href="/"
-            className={unit === "celcius" ? "active-link" : "inactive-link"}
+            className={unit === props.unit ? "active-link" : "inactive-link"}
           >
             {" "}
             °F

@@ -22,7 +22,11 @@ export default function Weather(props) {
           <div className="col p-0">
             <Weathericon icon={props.data.icon} width={100} height={100} />
           </div>
-          <Temperature celcius={props.data.temp} />
+          <Temperature
+            setUnit={props.setUnit}
+            unit={props.unit}
+            celcius={props.data.temp}
+          />
           <div className="col ms-2">
             <ul className="weatherinfo">
               <li>
@@ -36,7 +40,10 @@ export default function Weather(props) {
           </div>
         </div>
       </div>
-      <WeatherForecast coordinates={props.data.coordinates} />
+      <WeatherForecast
+        coordinates={props.data.coordinates}
+        unit={props.unit}
+      />
     </div>
   );
 }
