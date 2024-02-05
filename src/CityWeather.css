@@ -51,9 +51,7 @@ ul.weatherinfo {
 a:any-link{
   text-decoration: none;
 }
-.active-link {
-    color: blue; 
-  }
+
 
   .inactive-link {
     color: black;

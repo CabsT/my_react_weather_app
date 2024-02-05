@@ -21,9 +21,16 @@ export default function Temperature(props) {
       <div className=" col temp">
         <span className="temperature">{props.celcius}</span>
         <span className="unit">
-          °C |{" "}
+          <a href="/"
+            className={
+              props.unit === "celcius" ? "inactive-link" : "active-link"
+            }
+          >
+            °C{" "}
+          </a>
+          |
           <a
-            className={props.unit === "celcius"? "active-link" : "inactive-link"}
+            className="ms-1"
             href="/"
             onClick={showFahrenheit}
           >
@@ -37,20 +44,13 @@ export default function Temperature(props) {
       <div className=" col">
         <span className="temperature">{fahrenheit()}</span>
         <span className="unit ms-1">
+          °F <span>|</span>
           <a
-            className={props.unit === "celcius" ? "inactive-link" : "active-link"}
+            className={props.unit === "celcius" ? "active-link" : "active-link"}
             href="/"
             onClick={showCelcius}
           >
-            °C
-          </a>{" "}
-          |{" "}
-          <a
-            href="/"
-            className={props.unit === "celcius" ? "active-link" : "inactive-link"}
-          >
-            {" "}
-            °F
+            {""} °C
           </a>
         </span>
       </div>
